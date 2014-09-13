@@ -8,7 +8,17 @@
     mods: { theme: 'normal' },
     content: [
 
-        
+        {
+            block: 'rating',
+            name: 'rating-1'
+        },
+
+        {
+            block: 'rating',
+            mods: { disabled: 'yes' },
+            name: 'rating-2',
+            vote: 3
+        }
 
 
     ]

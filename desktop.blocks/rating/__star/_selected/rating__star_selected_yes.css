@@ -1,0 +1,5 @@
+.rating span,
+.rating input:checked + span
+{
+    background-image: url(rating__star_selected_yes.png);
+}

@@ -1,0 +1,16 @@
+.rating
+{
+    margin: 50px;
+}
+
+.rating input,
+.rating span
+{
+    cursor: pointer;
+}
+
+.rating_disabled_yes input,
+.rating_disabled_yes span
+{
+    cursor: default;
+}

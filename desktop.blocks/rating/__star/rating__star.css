@@ -1,0 +1,19 @@
+.rating input
+{
+    position: absolute;
+    opacity: 0;
+    width: 16px;
+}
+
+.rating span {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    background: no-repeat;
+    padding-right: 16px;
+}
+
+
+.rating input:checked + span ~ span  {
+    background-image:url(rating__star.png);
+}

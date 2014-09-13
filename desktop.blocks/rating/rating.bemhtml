@@ -1,0 +1,27 @@
+block rating {
+
+    content: {
+
+        var content = [],
+            i;
+
+        content.push({
+            elem: 'star',
+            checked: true,
+            hidden: true,
+            name: this.ctx.name
+        });
+
+        for (i = 1; i <= 5; i++) {
+            content.push({
+                elem: 'star',
+                name: this.ctx.name,
+                disabled: this.ctx.mods && this.ctx.mods.disabled === 'yes',
+                checked: i === this.ctx.vote
+            });
+        }
+
+        return content;
+
+    }
+}

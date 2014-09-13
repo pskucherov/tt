@@ -1,0 +1,33 @@
+block rating, elem star {
+
+    tag: '',
+    content: {
+
+        var input = {
+                tag: 'input',
+                attrs: { type: 'radio', name: this.ctx.name }
+            },
+            star = {
+                tag: 'span'
+            };
+
+        if (this.ctx.checked) {
+            input.attrs.checked = 'checked';
+        }
+
+        if (this.ctx.disabled) {
+            input.attrs.disabled = 'disabled';
+        }
+
+        if (this.ctx.hidden) {
+            star.attrs = { style: 'display: none;' };
+        }
+
+        return [
+            input,
+            star
+        ]
+
+    }
+
+}
