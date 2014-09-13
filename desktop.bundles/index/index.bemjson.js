@@ -18,8 +18,12 @@
             mods: { disabled: 'yes' },
             name: 'rating-2',
             vote: 3
-        }
+        },
 
+        {
+            block: 'progress-bar',
+            progress: 20
+        }
 
     ]
 })
