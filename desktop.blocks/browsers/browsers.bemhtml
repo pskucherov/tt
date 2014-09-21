@@ -1,0 +1,91 @@
+block browsers {
+
+    elem thumb {
+
+        content: {
+            block: 'image',
+            mix: {
+                block: 'browsers',
+                elem: 'thumb-img'
+            },
+            url: this.ctx.displayImages === false ? '' : '../../desktop.blocks/browsers/' + this.ctx.elemName + '.png',
+            attrs: {
+                onerror: "this.parentNode.innerHTML = '" + BEMHTML.apply({
+                        block: 'browsers',
+                        elem: 'thumb-load-error',
+                        mix: { elem: this.ctx.elemName },
+                        content: this.ctx.elemContent
+                    }) + "';"
+            }
+        }
+
+    }
+
+    content: {
+
+        var elems = [
+                {
+                    elem: 'chrome',
+                    content: [
+                        {
+                            tag: 'span',
+                            attrs: { style: 'color: #0f0;' },
+                            content: 'Ch'
+                        },
+                        {
+                            tag: 'span',
+                            attrs: { style: 'color: #f00;' },
+                            content: 'ro'
+                        },
+                        {
+                            tag: 'span',
+                            attrs: { style: 'color: #FFFF00;' },
+                            content: 'me'
+                        }
+                    ]
+                },
+                {
+                    elem: 'ff',
+                    content: 'Firefox'
+                },
+                {
+                    elem: 'opera',
+                    content: 'Opera'
+                },
+                {
+                    elem: 'safari',
+                    content: 'Safari'
+                },
+                {
+                    elem: 'ie',
+                    content: [
+                        'Internet',
+                        { tag: 'br' },
+                        'Explorer'
+                    ]
+                }
+            ],
+            content = [],
+            i;
+
+        for (i = 0; i < elems.length; i++) {
+
+            content.push({
+                elem: 'thumb',
+                mods: {
+                    inline: 'yes',
+                    size: 'm',
+                    right: elems[i].elem === 'ie' ? 'yes' : ''
+                },
+                displayImages: this.ctx.displayImages,
+                elemName: elems[i].elem,
+                elemContent: elems[i].content
+            });
+
+        }
+
+        return content;
+
+    }
+
+}

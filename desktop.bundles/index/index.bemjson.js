@@ -23,6 +23,15 @@
         {
             block: 'progress-bar',
             progress: 20
+        },
+
+        {
+            block: 'browsers'
+        },
+
+        {
+            block: 'browsers',
+            displayImages: false
         }
 
     ]

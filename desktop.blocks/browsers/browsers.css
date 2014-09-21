@@ -1,0 +1,56 @@
+.browsers
+{
+    margin: 50px;
+    width: 100%;
+    height: 100px;
+}
+
+.browsers__thumb_inline_yes
+{
+    margin: 5px;
+    display: inline-block;
+
+    text-align: center;
+}
+
+.browsers__thumb-load-error
+{
+    margin-top: 20px;
+}
+
+.browsers__thumb_size_m
+{
+    width: 100px;
+    height: 100px;
+}
+
+.browsers__thumb-img
+{
+    height: 100px;
+}
+
+.browsers__thumb_right_yes
+{
+    float: right;
+    margin-right: 50px;
+}
+
+.browsers__ff
+{
+    color: #ffc70b;
+}
+
+.browsers__opera
+{
+    color: #f00;
+}
+
+.browsers__safari
+{
+    color: #999;
+}
+
+.browsers__ie
+{
+    color: #236bff;
+}
