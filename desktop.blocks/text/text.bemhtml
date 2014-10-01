@@ -1,0 +1,27 @@
+block text {
+
+    elem title {
+        content: this.ctx.title
+    }
+
+    elem content {
+        content: this.ctx.content
+    }
+
+    elem p {
+        tag: 'p'
+    }
+
+    elem ul {
+        tag: 'ul'
+    }
+
+    elem li {
+        tag: 'li'
+    }
+
+    elem span {
+        tag: 'span'
+    }
+
+}
