@@ -26,6 +26,11 @@
         },
 
         {
+            block: 'button2',
+            content: 'Кнопка'
+        },
+
+        {
             block: 'browsers'
         },
 
