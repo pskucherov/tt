@@ -49,7 +49,7 @@
                 },
 
                 {
-                    elem: 'content',
+                    elem: 'section',
                     content: [
 
                         {
