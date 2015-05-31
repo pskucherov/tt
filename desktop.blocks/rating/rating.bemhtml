@@ -6,7 +6,7 @@ block rating {
             i;
 
         content.push({
-            elem: 'star',
+            elem: 'star-wrapper',
             checked: true,
             hidden: true,
             name: this.ctx.name
@@ -14,7 +14,7 @@ block rating {
 
         for (i = 1; i <= 5; i++) {
             content.push({
-                elem: 'star',
+                elem: 'star-wrapper',
                 name: this.ctx.name,
                 disabled: this.ctx.mods && this.ctx.mods.disabled === 'yes',
                 checked: i === this.ctx.vote

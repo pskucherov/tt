@@ -1,33 +1,40 @@
-block rating, elem star {
+block rating {
 
-    tag: '',
-    content: {
 
-        var input = {
-                tag: 'input',
-                attrs: { type: 'radio', name: this.ctx.name }
-            },
-            star = {
-                tag: 'span'
-            };
+    elem star-wrapper {
 
-        if (this.ctx.checked) {
-            input.attrs.checked = 'checked';
+        tag: '',
+        content: {
+
+            var input = {
+                    tag: 'input',
+                    attrs: { type: 'radio', name: this.ctx.name }
+                },
+                star = {
+                    block: 'rating',
+                    elem: 'star',
+                    tag: 'span'
+                };
+
+            if (this.ctx.checked) {
+                input.attrs.checked = 'checked';
+            }
+
+            if (this.ctx.disabled) {
+                input.attrs.disabled = 'disabled';
+            }
+
+            if (this.ctx.hidden) {
+                star.mods || (star.mods = {});
+                star.mods.hidden = 'yes';
+            }
+
+            return [
+                input,
+                star
+            ];
+
         }
-
-        if (this.ctx.disabled) {
-            input.attrs.disabled = 'disabled';
-        }
-
-        if (this.ctx.hidden) {
-            star.attrs = { style: 'display: none;' };
-        }
-
-        return [
-            input,
-            star
-        ]
-
     }
 
 }
