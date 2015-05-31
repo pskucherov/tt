@@ -9,8 +9,8 @@
     cursor: pointer;
 }
 
-.rating_disabled_yes input,
-.rating_disabled_yes span
+.rating_readonly_yes input,
+.rating_readonly_yes span
 {
     cursor: default;
 }

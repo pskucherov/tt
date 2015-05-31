@@ -15,7 +15,7 @@
 
         {
             block: 'rating',
-            mods: { disabled: 'yes' },
+            mods: { readonly: 'yes' },
             name: 'rating-2',
             vote: 3
         },

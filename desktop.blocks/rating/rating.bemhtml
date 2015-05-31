@@ -16,7 +16,7 @@ block rating {
             content.push({
                 elem: 'star-wrapper',
                 name: this.ctx.name,
-                disabled: this.ctx.mods && this.ctx.mods.disabled === 'yes',
+                readonly: this.ctx.mods && this.ctx.mods.readonly === 'yes',
                 checked: i === this.ctx.vote
             });
         }

@@ -20,7 +20,7 @@ block rating {
                 input.attrs.checked = 'checked';
             }
 
-            if (this.ctx.disabled) {
+            if (this.ctx.readonly) {
                 input.attrs.disabled = 'disabled';
             }
 
