@@ -28,21 +28,24 @@ block browsers {
                     elem: 'chrome',
                     content: [
                         {
-                            tag: 'span',
-                            attrs: { style: 'color: #0f0;' },
-                            content: 'Ch'
+                            color: '#0f0',
+                            part: 'Ch'
                         },
                         {
-                            tag: 'span',
-                            attrs: { style: 'color: #f00;' },
-                            content: 'ro'
+                            color: '#f00',
+                            part: 'ro'
                         },
                         {
-                            tag: 'span',
-                            attrs: { style: 'color: #FFFF00;' },
-                            content: 'me'
+                            color: '#ff0',
+                            part: 'me'
                         }
-                    ]
+                    ].map(function(word) {
+                        return {
+                            tag: 'span',
+                            attrs: { style: 'color:' + word.color },
+                            content: word.part
+                        };
+                    })
                 },
                 {
                     elem: 'ff',
@@ -68,21 +71,21 @@ block browsers {
             content = [],
             i;
 
-        for (i = 0; i < elems.length; i++) {
-
-            content.push({
-                elem: 'thumb',
-                mods: {
-                    inline: 'yes',
-                    size: 'm',
-                    right: elems[i].elem === 'ie' ? 'yes' : ''
-                },
-                displayImages: this.ctx.displayImages,
-                elemName: elems[i].elem,
-                elemContent: elems[i].content
-            });
-
-        }
+        content.push(
+            elems.map(function(browser) {
+                return {
+                    elem: 'thumb',
+                    mods: {
+                        inline: 'yes',
+                        size: 'm',
+                        right: browser.elem === 'ie' ? 'yes' : ''
+                    },
+                    displayImages: this.ctx.displayImages,
+                    elemName: browser.elem,
+                    elemContent: browser.content
+                };
+            }.bind(this))
+        );
 
         return content;
 
