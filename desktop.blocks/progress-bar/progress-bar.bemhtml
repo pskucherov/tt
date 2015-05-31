@@ -1,10 +1,7 @@
 block progress-bar {
 
     content: [
-        {
-            elem: 'text',
-            content: this.ctx.progress + '%'
-        },
+        this.ctx.progress + '%',
         {
             elem: 'progress',
             attrs: { style: 'width:' + this.ctx.progress + '%' }
