@@ -18,7 +18,8 @@
     padding-right: 16px;
 }
 
-
-.rating input:checked + span ~ span  {
-    background-image:url(rating__star.png);
+.rating input:hover + span ~ span,
+.rating input:checked + span ~ span
+{
+    background-image:url(rating__star.png) !important;
 }

@@ -5,19 +5,12 @@ block rating {
         var content = [],
             i;
 
-        content.push({
-            elem: 'star-wrapper',
-            checked: true,
-            hidden: true,
-            name: this.ctx.name
-        });
-
-        for (i = 1; i <= 5; i++) {
+        for (i = 0; i < 5; i++) {
             content.push({
                 elem: 'star-wrapper',
                 name: this.ctx.name,
                 readonly: this.ctx.mods && this.ctx.mods.readonly === 'yes',
-                checked: i === this.ctx.vote
+                checked: (i + 1) === this.ctx.vote
             });
         }
 
